@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 5; // define a variable that can be changeable from unity
+    public float speed = 5f; // define a variable that can be changeable from unity
+    public float balance = 4f;
     
     // Start is called before the first frame update
     void Start()
