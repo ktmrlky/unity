@@ -8,9 +8,9 @@ public class PrintToConsole : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int a = 55;
-        int b = 100;
-        int c = a + b; // here we can use other math operators /,-,* etc.
+        float a = 55;
+        float b = 100;
+        float c = a + b; // here we can use other math operators /,-,* etc.
 
         string name = "ahmet";
         string surname = "test";
@@ -19,11 +19,26 @@ public class PrintToConsole : MonoBehaviour
         Debug.Log(a +" + " +  b  + " = " + c); //concatenate the string with integer and print to console...
         
         print(name + " " + surname); // we can also use print to console
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         
+        // lets use method here
+        CalculateTwoNumbers(a,b);
+        
+        //let do this with return float
+        float result = ReturnTwoNumbers(a, b);
+        print(result);
+        
+    }
+    
+    //lets create a function that calculate upon we did
+    void CalculateTwoNumbers(float a, float b)
+    {
+        float res = a + b;
+        Debug.Log(a + " + " + b + " = " + res);
+    }
+    
+    // Moreover, we can return directly float instead of void function
+    float ReturnTwoNumbers(float a, float b)
+    {
+        return a + b;
     }
 }
